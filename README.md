@@ -1,6 +1,6 @@
 # Sistema de Organização de Estudos — Divisão de Tarefas do Grupo.
 
-> Projeto Final A3 — Projeto e Engenharia de Software
+> Projeto Final A3 — Projeto e Engenharia de Software.
 
 ---
 
