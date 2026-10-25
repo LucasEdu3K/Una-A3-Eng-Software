@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOE System - Horários de estudo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Horários de estudo | Requisitos: RF06 -->
+  <div class="pagina">
+    <header class="barra-topo">
+      <a class="voltar" href="menu.html">Voltar</a>
+      <span class="mini-logo">SOE</span>
+    </header>
+    <h1 class="faixa-titulo">Horários de estudo</h1>
+    <main class="conteudo">
+      <table class="grade">
+        <thead>
+          <tr><th></th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>M</th><td class="aula">Cálc</td><td></td><td class="aula">Cálc</td><td></td><td></td></tr>
+          <tr><th>T</th><td class="estudo">Est.</td><td class="aula">BD</td><td class="estudo">Est.</td><td class="aula">BD</td><td class="prova">Prova</td></tr>
+          <tr><th>N</th><td></td><td class="estudo">Est.</td><td class="aula">Redes</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <p class="legenda">
+        <span class="aula">Aula</span>
+        <span class="estudo">Estudo</span>
+        <span class="prova">Prova</span>
+      </p>
+      <!-- TODO RF06: formulário de bloco de estudo -->
+      <button type="button" class="botao">+ Bloco de estudo</button>
+    </main>
+  </div>
+</body>
+</html>
