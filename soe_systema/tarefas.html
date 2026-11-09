@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOE System - Tarefas e provas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Tarefas e provas | Requisitos: RF03, RF04, RF05, RF09, RF10 -->
+  <div class="pagina">
+    <header class="barra-topo">
+      <a class="voltar" href="menu.html">Voltar</a>
+      <span class="mini-logo">SOE</span>
+    </header>
+    <h1 class="faixa-titulo">Tarefas e provas</h1>
+    <main class="conteudo">
+      <ul class="lista-tarefas">
+        <li data-status="pendente" data-prazo="Amanhã" data-classe="urgente">
+          <span>Lista 3 - Cálculo</span><em class="selo urgente">Amanhã</em>
+        </li>
+        <li data-status="pendente" data-prazo="4 dias" data-classe="medio">
+          <span>Prova P1 - BD</span><em class="selo medio">4 dias</em>
+        </li>
+        <li data-status="pendente" data-prazo="9 dias" data-classe="longe">
+          <span>Trabalho - ES</span><em class="selo longe">9 dias</em>
+        </li>
+        <li data-status="feito" data-prazo="Feito" data-classe="feito">
+          <span>Lista 2 - Cálculo</span><em class="selo feito">Feito</em>
+        </li>
+      </ul>
+      <p class="dica">Toque numa tarefa pra marcar como concluída (RF04)</p>
+      <button type="button" class="botao" id="btn-filtro">Filtrar por status: todas</button>
+    </main>
+  </div>
+</body>
+</html>

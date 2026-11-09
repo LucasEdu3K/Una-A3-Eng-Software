@@ -1,0 +1,362 @@
+/* ===== CORES (mexe aqui pra mudar o tema todo) ===== */
+:root {
+  --noite: #030f1f;
+  --azul: #0a2a2e;
+  --destaque: #4ade3a;
+  --gelo: #eefcee;
+  --erro: #ff3b5c;
+  --amarelo: #ffb02e;
+  --verde: #d4ff70;
+}
+
+/* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Barlow", "Segoe UI", sans-serif;
+  font-weight: 500;
+  color: var(--gelo);
+  background:
+    repeating-linear-gradient(115deg, transparent 0 38px, rgba(74, 222, 58, 0.05) 38px 40px),
+    linear-gradient(160deg, var(--noite), var(--azul));
+}
+
+.pagina {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 24px 56px;
+}
+
+.conteudo {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ===== TOPO ===== */
+.barra-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.voltar {
+  padding: 4px 22px 4px 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--noite);
+  background: var(--destaque);
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+}
+
+.voltar::before {
+  content: "◀ ";
+}
+
+.mini-logo {
+  font-family: "Anton", Impact, sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  color: var(--destaque);
+  text-shadow: 2px 2px 0 var(--azul);
+}
+
+.faixa-titulo {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  padding: 8px 48px 8px 20px;
+  font-family: "Anton", Impact, sans-serif;
+  font-size: 2.6rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--noite);
+  background: var(--gelo);
+  border-left: 12px solid var(--destaque);
+  clip-path: polygon(0 0, 100% 0, 94% 100%, 0 100%);
+}
+
+/* ===== LOGO (tela de login, imagem em assets/logo.png) ===== */
+.logo {
+  display: block;
+  width: 240px;
+  height: auto;
+  margin: 24px auto 16px;
+  /* esmaece as bordas da imagem pra ela se misturar com o fundo */
+  -webkit-mask-image: radial-gradient(circle closest-side, #000 88%, transparent 100%);
+  mask-image: radial-gradient(circle closest-side, #000 88%, transparent 100%);
+}
+
+/* ===== FORMULÁRIOS ===== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--destaque);
+}
+
+input,
+select {
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--noite);
+  background: var(--gelo);
+  border: none;
+  border-bottom: 4px solid var(--destaque);
+}
+
+input.erro {
+  border-bottom-color: var(--erro);
+  background: #ffd9e0;
+}
+
+input:focus-visible,
+select:focus-visible,
+.botao:focus-visible,
+.voltar:focus-visible,
+.item:focus-visible,
+.link-centro:focus-visible {
+  outline: 3px solid var(--destaque);
+  outline-offset: 3px;
+}
+
+/* ===== BOTÕES E LINKS ===== */
+.botao {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px;
+  font-family: "Anton", Impact, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--noite);
+  background: var(--destaque);
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(3% 0, 100% 0, 97% 100%, 0 100%);
+  transition: background 0.15s;
+}
+
+.botao:hover {
+  background: var(--gelo);
+}
+
+.botao.pequeno {
+  width: auto;
+  min-width: 200px;
+  align-self: flex-end;
+}
+
+.link-centro {
+  padding: 8px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--destaque);
+  text-decoration: none;
+}
+
+.link-centro:hover {
+  color: var(--gelo);
+}
+
+.aviso-erro {
+  max-width: 420px;
+  margin: 0 auto 16px;
+  padding: 14px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 59, 92, 0.25);
+  border-left: 8px solid var(--erro);
+}
+
+/* ===== MENU (estilo menu do P3R) ===== */
+.lista-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.item {
+  padding: 18px 28px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--gelo);
+  background: rgba(10, 42, 46, 0.9);
+  border-left: 10px solid var(--destaque);
+  clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
+  transition: transform 0.15s, background 0.15s, color 0.15s;
+}
+
+.item:hover,
+.item:focus-visible {
+  color: var(--noite);
+  background: var(--destaque);
+  transform: translateX(14px);
+}
+
+/* ===== CARTÕES E BARRAS ===== */
+.cartao {
+  margin-bottom: 14px;
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  background: rgba(238, 252, 238, 0.08);
+  border-left: 8px solid var(--destaque);
+}
+
+.barra {
+  height: 12px;
+  margin-top: 10px;
+  background: rgba(238, 252, 238, 0.15);
+  transform: skewX(-20deg);
+}
+
+.barra-cheia {
+  width: 0; /* o JS preenche usando data-progresso */
+  height: 100%;
+  background: var(--destaque);
+}
+
+/* ===== TAREFAS ===== */
+.lista-tarefas {
+  list-style: none;
+}
+
+.lista-tarefas li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 14px 18px;
+  font-size: 1.2rem;
+  background: rgba(238, 252, 238, 0.08);
+  border-left: 8px solid var(--destaque);
+  cursor: pointer;
+}
+
+.lista-tarefas li:hover {
+  background: rgba(74, 222, 58, 0.2);
+}
+
+.lista-tarefas li[data-status="feito"] span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.selo {
+  padding: 2px 16px;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--noite);
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+}
+
+.selo.urgente { background: var(--erro); color: #fff; }
+.selo.medio   { background: var(--amarelo); }
+.selo.longe   { background: var(--destaque); }
+.selo.feito   { background: var(--verde); }
+
+.dica {
+  margin: 8px 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* ===== GRADE DE HORÁRIOS ===== */
+.grade {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 4px;
+  text-align: center;
+}
+
+.grade th {
+  color: var(--destaque);
+  text-transform: uppercase;
+}
+
+.grade td {
+  height: 52px;
+  background: rgba(238, 252, 238, 0.06);
+}
+
+.grade td.aula,
+.legenda .aula   { background: rgba(74, 222, 58, 0.4); }
+.grade td.estudo,
+.legenda .estudo { background: rgba(255, 176, 46, 0.5); }
+.grade td.prova,
+.legenda .prova  { background: rgba(255, 59, 92, 0.6); }
+
+.legenda {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.legenda span {
+  padding: 2px 16px;
+}
+
+/* ===== PROGRESSO ===== */
+.numeros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.numeros div {
+  padding: 16px 8px;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba(238, 252, 238, 0.08);
+  border-bottom: 5px solid var(--destaque);
+}
+
+.numeros b {
+  display: block;
+  font-family: "Anton", Impact, sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--destaque);
+}
+
+/* ===== TELAS PEQUENAS (RNF02) ===== */
+@media (max-width: 600px) {
+  .faixa-titulo {
+    font-size: 1.8rem;
+  }
+
+  .numeros {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* respeita quem desativa animações no sistema */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
